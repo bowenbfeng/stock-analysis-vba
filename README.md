@@ -61,7 +61,7 @@ For i = 2 To RowCount
 
     '3b) Check if the current row is the first row with the selected tickerIndex.
     'If  Then
-    If Cells(i - 1, 2).Value <> tickers(tickerIndex) Then
+    If Cells(i - 1, 1).Value <> tickers(tickerIndex) Then
 
         tickerStartingPrices(tickerIndex) = Cells(i, 6).Value
 
@@ -71,7 +71,7 @@ For i = 2 To RowCount
     '3c) check if the current row is the last row with the selected ticker
      'If the next rowâ€™s ticker doesnâ€™t match, increase the tickerIndex.
     'If  Then
-    If Cells(i + 1, 2).Value <> tickers(tickerIndex) Then
+    If Cells(i + 1, 1).Value <> tickers(tickerIndex) Then
 
         tickerEndingPrices(tickerIndex) = Cells(i, 6).Value
 
